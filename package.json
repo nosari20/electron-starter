@@ -9,11 +9,11 @@
     "typings": "typings",
     "build": "gulp electron:prod",
     "electron": "electron",
-    "live": "gulp electron:live",
+    "live": "concurrently \"npm run gulp electron:live\" \"npm run watch\" ",
     "live:web": "gulp live:web",
     "electron-packager": "electron-packager",
     "watch": "gulp watch",
-    "start": "concurrently \"npm run live\" \"npm run watch\" ",
+    "start": "\"npm run live\" ",
     "postinstall": "typings install dt~chai dt~mocha --global --save & typings install  dt~orchestrator --save"
   },
   "author": "nosari20",

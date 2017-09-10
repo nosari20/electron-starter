@@ -24,9 +24,14 @@
 ```
 > npm run build
 ```
-### electron live reload (no watcher)
+### electron live reload
 ```
 > npm run live
+```
+
+### web live reload
+```
+> npm run live:web
 ```
 
 ### watch (TS + HTML + SCSS)
