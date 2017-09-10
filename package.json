@@ -10,6 +10,7 @@
     "build": "gulp electron:prod",
     "electron": "electron",
     "live": "gulp electron:live",
+    "live:web": "gulp live:web",
     "electron-packager": "electron-packager",
     "watch": "gulp watch",
     "start": "concurrently \"npm run live\" \"npm run watch\" ",

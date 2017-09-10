@@ -69,6 +69,9 @@ gulp.task('electron:live', ['build'], function(){
 gulp.task('build', ['build-ts', 'build-sass', 'build-html', 'copy-file']);
 gulp.task('build:prod', ['build-ts-min', 'build-sass-min', 'build-html', 'copy-file']);
 
+/* Web live dev */
+gulp.task('live:web', ['live', 'watch']);
+
 /*  Watching */
 gulp.task('watch', function(){
     ts_watcher = gulp.watch('src/**/*.ts', ['build-ts']);
