@@ -13,7 +13,6 @@ var gulp = require('./gulp')([
     'run-test',
     'build-sass-min',
     'build-ts-min',
-    'electron'
 ]);
 
 /* Electron */
@@ -70,11 +69,11 @@ gulp.task('build', ['build-ts', 'build-sass', 'build-html', 'copy-file']);
 gulp.task('build:prod', ['build-ts-min', 'build-sass-min', 'build-html', 'copy-file']);
 
 /* Web live dev */
-gulp.task('live:web', ['live', 'watch']);
+gulp.task('live:web', ['live']);
 
 /*  Watching */
 gulp.task('watch', function(){
-    ts_watcher = gulp.watch('src/**/*.ts', ['build-ts']);
+    ts_watcher = gulp.watch(['src/**/*.ts', 'src/**/*.vue'], ['build-ts']);
     ts_watcher.on('change', function(event) {
         console.log('File [TypeScript]' + event.path + ' was ' + event.type + ', running tasks...');
     });

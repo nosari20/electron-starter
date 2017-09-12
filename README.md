@@ -6,7 +6,7 @@
 * [Gulp](http://gulpjs.com/)
 * [Sass](http://sass-lang.com/)
 * [Twig](https://twig.symfony.com/)
-
+* [VueJS](https://vuejs.org/)
 
 ## Installation
 ```

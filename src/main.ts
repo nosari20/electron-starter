@@ -1,10 +1,12 @@
-export class HelloTS {
-    constructor(){};
+import Vue = require('vue/dist/vue');
+//import App from './App.vue';
+import App = require('./app.vue')
 
-    sayHello(){
-        return 'Hello World !';
-    }
-}
-
-let hello: HelloTS = new HelloTS();
-console.log(hello.sayHello());
+new Vue({ // eslint-disable-line no-new
+  el: '#app',
+  delimiters: ['${', '}'],
+  //render: (h) => h(App),
+  render: function (createElement) {
+    return createElement(App)
+  },
+})
